@@ -33,17 +33,16 @@ function car_repair_services_services_post_type() {
 		'filter_items_list'     => __( 'Filter items list', 'car-repair-services-core' ),
 	);
 
-		
-	$options = car_repair_services_options(); // global now set
-
-    $slug_postype_car_service = 'car-services';
-    if ( is_array( $options ) && ! empty( $options['car_repair_services-slug_postype_car_repair_services'] ) ) {
-        $slug_postype_car_service = $options['car_repair_services-slug_postype_car_repair_services'];
-    }
-	echo '<pre>';
-var_dump( car_repair_services_options() );
-echo '</pre>';
-
+	// Get Redux options with fallback
+	$options = car_repair_services_options();
+	
+	// Default slug
+	$slug_postype_car_service = 'car-services';
+	
+	// Check if options are available and the specific option exists
+	if ( is_array( $options ) && isset( $options['car_repair_services-slug_postype_car_repair_services'] ) && ! empty( $options['car_repair_services-slug_postype_car_repair_services'] ) ) {
+		$slug_postype_car_service = $options['car_repair_services-slug_postype_car_repair_services'];
+	}
 
 	$args = [
 		'labels'             => $labels,
@@ -63,4 +62,5 @@ echo '</pre>';
 
 	register_post_type( 'car_services', $args );
 }	
-add_action( 'init', 'car_repair_services_services_post_type' );
+// Use higher priority (15) to ensure Redux has time to initialize
+add_action( 'init', 'car_repair_services_services_post_type', 15 );
