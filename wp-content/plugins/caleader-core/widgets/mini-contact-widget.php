@@ -134,7 +134,6 @@ class Minicontact_Widget extends WP_Widget {
 		return $instance;
 	}
 } // class Minicontact_Widget
-new Minicontact_Widget();
 // register MiniContact widget
 function register_minicontact_widget() {
 	register_widget( 'Minicontact_Widget' );

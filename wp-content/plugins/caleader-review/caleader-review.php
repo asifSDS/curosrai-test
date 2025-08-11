@@ -259,8 +259,8 @@ class CarLeaderCustomerReviews {
 	}
 }
  $CarLeaderCustomerReviews = new CarLeaderCustomerReviews();
-
-add_action( 'plugins_loaded', 'carleader_review_load_textdomain' );
+ 
+add_action( 'init', 'carleader_review_load_textdomain' );
 function carleader_review_load_textdomain() {
 	load_plugin_textdomain( 'carleader-review', false, basename( dirname( __FILE__ ) ) . '/languages' );
 }

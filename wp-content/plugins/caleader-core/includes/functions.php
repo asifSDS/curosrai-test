@@ -9,7 +9,7 @@ add_action(
 			\Elementor\Plugin::$instance->elements_manager->add_category(
 				'car-leader',
 				[
-					'title' => esc_html__( 'Car Leader', 'car-leader' ),
+					'title' => 'Car Leader',
 					'icon'  => 'fa fa-plug',
 				],
 				1
@@ -88,7 +88,7 @@ add_action(
 		\Elementor\Plugin::$instance->elements_manager->add_category(
 			'CarLeader',
 			[
-				'title' => esc_html__( 'CarLeader', 'caleader-core' ),
+				'title' => 'CarLeader',
 				'icon'  => 'fa fa-plug',
 			],
 			1

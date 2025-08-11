@@ -45,7 +45,7 @@ if ( ! defined( 'CARLEADER_COMPARE_PLUGIN_SETTINGS_DIR' ) ) {
 
 
 
-add_action( 'plugins_loaded', 'carleader_compare_load_textdomain' );
+add_action( 'init', 'carleader_compare_load_textdomain' );
 
 function carleader_compare_load_textdomain() {
 	load_plugin_textdomain( 'caleader-compare', false, basename( dirname( __FILE__ ) ) . '/languages' );

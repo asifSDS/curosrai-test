@@ -64,7 +64,7 @@ function cacarleader_listing_admin_enqueue( $hook ) {
 	wp_enqueue_style( 'cal-lisiting-font', get_template_directory_uri() . '/font/style.css' );
 }
 remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
-add_action( 'plugins_loaded', 'carleader_listing_load_textdomain' );
+add_action( 'init', 'carleader_listing_load_textdomain' );
 /**
  * Load plugin textdomain.
  *

@@ -127,7 +127,6 @@ class Servicepost_Widget extends WP_Widget {
 		return $instance;
 	}
 } // class Servicepost_Widget
-new Servicepost_Widget();
 // register Service Post widget
 function register_servicepost_widget() {
 	register_widget( 'Servicepost_Widget' );

@@ -150,7 +150,6 @@ class Buttonwidget_Widget_test extends WP_Widget {
 <?php
 }
 }
-new Buttonwidget_Widget_test();
 function register_onetomany_widget() {
     register_widget( 'Buttonwidget_Widget_test' );
 }
