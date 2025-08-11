@@ -56,7 +56,6 @@ function cacarleader_core_admin_enqueue( $hook ) {
 	wp_enqueue_script( 'custom-js', plugin_dir_url( __FILE__ ) . '/js/admin.js' );
 }
 remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
-add_action( 'plugins_loaded', 'carleader_core_load_textdomain' );
 /**
  * Load plugin textdomain.
  *
